@@ -1,9 +1,10 @@
 {
     "name": "Text To Speech Extension",
     "version": "0.1",
-    "manifest_version": 1,
+    "manifest_version": 3,
     "minimum_chrome_version": "23",
-    "permissions": ["ttsEngine", "storage", "activeTab", "scripting"],
+    "start_url": "./",
+    "permissions": ["ttsEngine", "tts", "storage", "activeTab", "scripting"],
   
     "tts_engine": {
         "voices": [
