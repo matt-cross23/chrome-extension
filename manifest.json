@@ -1,0 +1,31 @@
+{
+    "name": "Text To Speech Extension",
+    "version": "0.1",
+    "manifest_version": 1,
+    "minimum_chrome_version": "23",
+    "permissions": ["ttsEngine", "storage", "activeTab", "scripting"],
+  
+    "tts_engine": {
+        "voices": [
+          {
+            "voice_name": "Alice",
+            "lang": "en-US",
+            "event_types": ["start", "marker", "end"]
+          },
+          {
+            "voice_name": "Pat",
+            "lang": "en-US",
+            "event_types": ["end"]
+          }
+        ]
+      },
+
+      "background": {
+        "service_worker": "background.js"
+      },
+      "action": {
+        "default_popup": "popup.html"
+      }
+  
+    }
+  
