@@ -12,7 +12,8 @@ chrome.storage.sync.get("color", ({ color }) => {
 // When the button is clicked, inject setPageBackgroundColor into current page
 changeColor.addEventListener("click", async () => {
     let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  
+      // Speak Function
+    chrome.tts.speak('Hello world.');
     chrome.scripting.executeScript({
       target: { tabId: tab.id },
       function: setPageBackgroundColor,
@@ -27,5 +28,4 @@ changeColor.addEventListener("click", async () => {
     });
   }
 
-  // Speak Function
-  chrome.runtime.sendMessage({toSay: "hello world"}, function() {});
+
