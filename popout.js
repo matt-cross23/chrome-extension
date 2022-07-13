@@ -1,8 +1,9 @@
 // Initialize button with user's preferred color
-let changeColor = document.getElementById("changeColor");
+let changeColor = document.getElementById('changeColor');
 
-chrome.storage.sync.get("color", ({ color }) => {
-  changeColor.style.backgroundColor = color;
+chrome.storage.sync.get('color', function(data) {
+  changeColor.style.backgroundColor = data.color;
+  changeColor.setAttribute('value', data.color);
 });
 
 // When the button is clicked, inject setPageBackgroundColor into current page
