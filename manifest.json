@@ -2,15 +2,9 @@
     "name": "Text To Speech Extension",
     "version": "0.1",
     "manifest_version": 3,
-<<<<<<< HEAD
-    "description": "Text To Speech for assessments",
-    "minimum_chrome_version": "23",
-    "permissions": ["ttsEngine", "tts", "storage", "activeTab", "scripting", "declarativeContent"],
-=======
     "minimum_chrome_version": "23",
     "start_url": "./",
     "permissions": ["ttsEngine", "tts", "storage", "activeTab", "scripting"],
->>>>>>> 9a0267a9683c75442b72e3e41acbb82523b09c5d
   
     "tts_engine": {
         "voices": [
